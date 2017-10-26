@@ -4,27 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp3
+namespace ConsoleApp8
 {
     class Program
     {
         static void Main(string[] args)
         {
             int i;
-            Random liczba = new Random();
-            double[] tablica = new double[100];
-
-            for (i=0; i < tablica.Length; i++)
+            Random rand = new Random();
+            for (i = 0; i < 50; i++)
             {
-                tablica[i] = liczba.NextDouble();
+                int a = rand.Next(1, 100);
+                if (a % 3 == 0)
+                {
+                    continue;
+                }
+                Console.WriteLine(a);
             }
-            var query = tablica.Select(n => n).ToArray();
-            foreach (var item in query)
-            {
-                Console.WriteLine(item + ", ");
-            }
-
-
+            Console.ReadLine();
         }
     }
 }
