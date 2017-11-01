@@ -4,24 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp8
+namespace Zadania
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int i;
-            Random rand = new Random();
-            for (i = 0; i < 50; i++)
+            int i=50;
+            do
             {
-                int a = rand.Next(1, 100);
-                if (a % 3 == 0)
+            if (i % 2 == 1)
                 {
-                    continue;
+                    Console.WriteLine("{0}", i);
+                    i--;
                 }
-                Console.WriteLine(a);
-            }
-            Console.ReadLine();
+                else
+                {
+                    i--;
+                }
+                
+            } while (i > 1);
         }
     }
 }
